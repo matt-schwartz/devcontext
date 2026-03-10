@@ -7,7 +7,7 @@ The 2024 State of Developer Productivity report found "time spent gathering proj
 An automatic knowledge capture system that:
 
 - Monitors dev activity (Git, IDE, Slack, Jira) to capture context
-- Extracts "why" decisions were made from PR discussions, Slack threads
+- Extracts "why" decisions were made from PR discussions, Slack threads, etc.
 - Builds searchable knowledge graph of project decisions
 - Surfaces relevant context when starting new work
 - Works locally/self-hosted (privacy-first)
@@ -19,7 +19,7 @@ Local-only, basic context capture
 
 ### Commercial
 
-Team sync, advanced search, AI summarization
+Team sync, advanced search, AI summarization, more integrations
 
 ## Implementation
 
@@ -32,5 +32,3 @@ Core components:
     - BYOK LLMs to extract structured knowledge
 - Query interface
     - BYOK natural language search
-
-
