@@ -33,3 +33,11 @@ def store_with_embedding(id, content, type, project, timestamp) -> None:
         ids=[id]
     )
 
+
+def query(q: str):
+    results = collection.query(
+        query_texts=[q],
+        n_results=10,         # TODO: This is completely arbitrary; Experiment to fill available context as well as sort by relevance or timeliness
+        where=None,
+    )
+    return results

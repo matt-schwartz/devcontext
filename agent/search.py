@@ -22,7 +22,7 @@ from langchain.chat_models import init_chat_model
 from langgraph.checkpoint.memory import InMemorySaver
 from langchain.tools import tool, ToolRuntime
 
-from storage.vector import collection
+import storage.vector
 import settings
 
 os.environ["ANTHROPIC_API_KEY"] = settings.ANTHROPIC_API_KEY
@@ -38,11 +38,7 @@ Do not make up answers or provide information not present in the context.
 @tool
 def search_context(query: str) -> str:
     """Search for references to the query in the reference documents."""
-    results = collection.query(
-        query_texts=[query],
-        n_results=5,
-        where=None,
-    )
+    results = storage.vector.query(query)
 
     documents = results.get("documents", [[]])[0]
     metadatas = results.get("metadatas", [[]])[0]
