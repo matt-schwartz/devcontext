@@ -1,0 +1,51 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for 3D depth -->
+    <linearGradient id="topGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="sideGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="frontGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Isometric layered blocks representing timeline/history -->
+  
+  <!-- Block 1 (back layer) -->
+  <g transform="translate(60, 80)">
+    <!-- Top face -->
+    <path d="M 0 0 L 30 -15 L 60 0 L 30 15 Z" fill="url(#topGradient)" opacity="0.6"/>
+    <!-- Right face -->
+    <path d="M 60 0 L 30 15 L 30 40 L 60 25 Z" fill="url(#sideGradient)" opacity="0.6"/>
+    <!-- Left face -->
+    <path d="M 0 0 L 30 15 L 30 40 L 0 25 Z" fill="url(#frontGradient)" opacity="0.4"/>
+  </g>
+  
+  <!-- Block 2 (middle layer) -->
+  <g transform="translate(50, 95)">
+    <!-- Top face -->
+    <path d="M 0 0 L 30 -15 L 60 0 L 30 15 Z" fill="url(#topGradient)" opacity="0.8"/>
+    <!-- Right face -->
+    <path d="M 60 0 L 30 15 L 30 50 L 60 35 Z" fill="url(#sideGradient)" opacity="0.8"/>
+    <!-- Left face -->
+    <path d="M 0 0 L 30 15 L 30 50 L 0 35 Z" fill="url(#frontGradient)" opacity="0.6"/>
+  </g>
+  
+  <!-- Block 3 (front layer - most prominent) -->
+  <g transform="translate(40, 110)">
+    <!-- Top face -->
+    <path d="M 0 0 L 30 -15 L 60 0 L 30 15 Z" fill="url(#topGradient)"/>
+    <!-- Right face -->
+    <path d="M 60 0 L 30 15 L 30 60 L 60 45 Z" fill="url(#sideGradient)"/>
+    <!-- Left face -->
+    <path d="M 0 0 L 30 15 L 30 60 L 0 45 Z" fill="url(#frontGradient)" opacity="0.8"/>
+  </g>
+</svg>
